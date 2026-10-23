@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi carrito | Blossom</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body class="pagina-carrito-body">
+
+    <header class="encabezado-carrito">
+        <nav class="navegacion-carrito">
+            <a href="../index.html" class="logo-carrito">Blossom<span>.</span></a>
+
+            <div class="enlaces-carrito">
+                <a href="../index.html">Inicio</a>
+                <a href="productos.html">Catálogo</a>
+                <a href="carrito.html" class="enlace-activo">
+                    Mi carrito
+                    <span id="contador-carrito" class="contador-carrito">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-carrito">
+
+        <section class="presentacion-carrito">
+            <div>
+                <span class="etiqueta-blossom">TU ESPACIO DE COMPRA</span>
+                <h1>Tu carrito <span>Blossom</span></h1>
+                <p>Los detalles que hacen de tu casa un hogar.</p>
+            </div>
+
+            <div class="icono-carrito-grande" aria-hidden="true">
+                <span>♡</span>
+            </div>
+        </section>
+
+        <div class="progreso-compra">
+            <div class="paso-compra paso-activo">
+                <span>1</span>
+                <p>Carrito</p>
+            </div>
+
+            <div class="linea-progreso"></div>
+
+            <div class="paso-compra">
+                <span>2</span>
+                <p>Datos de compra</p>
+            </div>
+
+            <div class="linea-progreso"></div>
+
+            <div class="paso-compra">
+                <span>3</span>
+                <p>Confirmación</p>
+            </div>
+        </div>
+
+        <div class="distribucion-carrito">
+
+            <section class="lista-carrito">
+                <div class="titulo-lista-carrito">
+                    <div>
+                        <h2>Mis productos</h2>
+                        <p id="cantidad-resumen">Todavía no agregaste productos.</p>
+                    </div>
+
+                    <a href="productos.html" class="seguir-comprando">
+                        + Seguir comprando
+                    </a>
+                </div>
+
+                <div id="carrito-contenido" class="productos-carrito">
+                    <!-- carrito.js genera aquí las tarjetas -->
+                </div>
+
+                <div id="carrito-vacio" class="carrito-vacio" hidden>
+                    <div class="carrito-vacio-icono">♡</div>
+                    <h3>¡Tu carrito te está esperando!</h3>
+                    <p>
+                        Todavía no agregaste productos.
+                        Explorá nuestro catálogo y encontrá algo para tu hogar.
+                    </p>
+                    <a href="productos.html" class="boton-blossom">
+                        Explorar catálogo
+                    </a>
+                </div>
+
+                <div class="beneficios-carrito">
+                    <div class="beneficio-carrito">
+                        <span>✓</span>
+                        <div>
+                            <strong>Compra sencilla</strong>
+                            <p>Elegí tus productos con tranquilidad.</p>
+                        </div>
+                    </div>
+
+                    <div class="beneficio-carrito">
+                        <span>♡</span>
+                        <div>
+                            <strong>Elegido para tu hogar</strong>
+                            <p>Todo lo que necesitás en un solo lugar.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="resumen-compra">
+                <h2>Resumen de compra</h2>
+                <p class="subtitulo-resumen">Revisá tu pedido antes de continuar.</p>
+
+                <div class="fila-resumen">
+                    <span>Productos</span>
+                    <span id="subtotal-carrito">$0</span>
+                </div>
+
+                <div class="fila-resumen fila-descuento" id="fila-descuento" hidden>
+                    <span>Descuentos</span>
+                    <span id="descuento-carrito">−$0</span>
+                </div>
+
+                <div class="fila-resumen">
+                    <span>Envío</span>
+                    <span class="envio-pendiente">A calcular</span>
+                </div>
+
+                <div class="separador-resumen"></div>
+
+                <div class="fila-total">
+                    <span>Total estimado</span>
+                    <strong id="total-carrito">$0</strong>
+                </div>
+
+                <p class="nota-total">
+                    El costo de envío y el importe final se confirmarán
+                    durante el proceso de compra.
+                </p>
+
+                <button
+                    type="button"
+                    id="btn-finalizar-compra"
+                    class="boton-finalizar"
+                    disabled
+                >
+                    Continuar con la compra <span>→</span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-vaciar-carrito"
+                    class="boton-vaciar"
+                    disabled
+                >
+                    Vaciar carrito
+                </button>
+
+                <p id="mensaje-carrito" role="status" aria-live="polite"></p>
+
+                <div class="compra-segura">
+                    <span>♡</span>
+                    <p>Tu selección queda guardada en este navegador.</p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="pie-carrito">
+        <a href="../index.html" class="logo-carrito">Blossom<span>.</span></a>
+        <p>Tu hogar, nuestro compromiso.</p>
+    </footer>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/carrito.js"></script>
+
+</body>
+</html>

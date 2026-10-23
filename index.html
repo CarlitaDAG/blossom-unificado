@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Blossom | Electrodomésticos</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+
+<header>
+    <div class="logo">
+    <a href="index.html">
+        <img src="img/logo/logo-blossom.png" alt="Blossom Electrodomésticos">
+    </a>
+</div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="pages/productos.html">Catálogo</a>
+        <a href="#categorias">Categorías</a>
+    </nav>
+    
+
+    <div class="buscador">
+    <input
+        type="text"
+        id="buscador-productos"
+        placeholder="¿Qué estás buscando?"
+    >
+
+    <button id="btn-buscar">
+        Buscar
+    </button>
+</div>
+
+    <a href="pages/carrito.html" class="carrito">
+        <img src="img/logo/carrito-blossom.png" alt="Carrito de compras">
+    </a>
+</header>
+<div class="acceso-admin">
+    <a href="admin/login.php">
+        🔐 Acceso Administrativo
+    </a>
+</div>
+
+<main>
+
+
+
+<!-- ==============================
+     BANNER PRINCIPAL
+     ============================== -->
+
+<section class="hero">
+
+    <div class="hero-contenido">
+
+        <p class="hero-subtitulo">
+            TU HOGAR, EN UN SOLO CLIC
+        </p>
+
+        <h2>
+            Tecnología para una vida
+            <span>más simple</span>
+        </h2>
+
+        <p class="hero-descripcion">
+            Los mejores electrodomésticos,
+            las mejores marcas, en Blossom.
+        </p>
+
+        <a href="pages/productos.html" class="hero-boton">
+            Ver productos →
+        </a>
+
+    </div>
+
+    <div class="hero-imagen">
+
+        <img
+            src="img/hero-blossom.png"
+            alt="Electrodomésticos Blossom"
+        >
+
+    </div>
+
+</section>
+
+   <section id="categorias" class="categorias">
+
+    <h2>Explorá nuestras categorías</h2>
+
+    <div class="categorias-container">
+
+        <a href="pages/productos.html?categoria=cocina" class="categoria-card">
+            <div class="categoria-icono">
+            <img src="img/categorias/cocina.png" alt="Cocina"></div>
+            <h3>Cocina</h3>
+            <p>Cocinas, microondas y hornos eléctricos.</p>
+            <span>Ver productos →</span>
+        </a>
+
+
+        <a href="pages/productos.html?categoria=refrigeracion" class="categoria-card">
+            <div class="categoria-icono">
+ <img src="img/categorias/refrigeracion.png" alt="Refrigeración">
+            </div>
+            <h3>Refrigeración</h3>
+            <p>Heladeras y freezers.</p>
+            <span>Ver productos →</span>
+        </a>
+
+
+        <a href="pages/productos.html?categoria=lavado" class="categoria-card">
+            <div class="categoria-icono"><img src="img/categorias/lavado.png" alt="Lavado"></div>
+            <h3>Lavado</h3>
+            <p>Lavarropas para tu hogar.</p>
+            <span>Ver productos →</span>
+        </a>
+
+
+        <a href="pages/productos.html?categoria=limpieza" class="categoria-card">
+            <div class="categoria-icono"><img src="img/categorias/limpieza.png" alt="Limpieza"></div>
+            <h3>Limpieza</h3>
+            <p>Aspiradoras y planchas.</p>
+            <span>Ver productos →</span>
+        </a>
+
+
+        <a href="pages/productos.html?categoria=climatizacion" class="categoria-card">
+            <div class="categoria-icono"><img src="img/categorias/climatizacion.png" alt="Climatización"></div>
+            <h3>Climatización</h3>
+            <p>Aires acondicionados, ventiladores y calefactores.</p>
+            <span>Ver productos →</span>
+        </a>
+
+
+        <a href="pages/productos.html?categoria=pequenos-electrodomesticos" class="categoria-card">
+            <div class="categoria-icono"><img src="img/categorias/pequenos-electrodomesticos.png"
+        alt="Pequeños electrodomésticos" ></div>
+            <h3>Pequeños electrodomésticos</h3>
+            <p>Cafeteras, licuadoras, batidoras, tostadoras y freidoras de aire.</p>
+            <span>Ver productos →</span>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     OFERTAS DESTACADAS
+     ============================== -->
+
+<section class="ofertas">
+
+    <div class="ofertas-encabezado">
+
+        <h2>🔥 Ofertas especiales</h2>
+
+        <p>
+            Aprovechá nuestros productos seleccionados con precios especiales.
+        </p>
+
+    </div>
+
+    <div id="productos-ofertas" class="productos-grid ofertas-grid">
+        <!-- Las ofertas se cargarán con JavaScript -->
+    </div>
+
+</section>
+
+    <section class="mas-vendidos">
+
+        <h2>⭐ Productos más vendidos</h2>
+
+        <div id="productos-destacados">
+
+            <!-- Los productos se cargarán posteriormente con JavaScript -->
+
+        </div>
+
+    </section>
+
+    <section class="beneficios">
+    <div class="beneficio">
+        <div class="beneficio-icono">🚚</div>
+        <h3>Envíos</h3>
+        <p>Enviamos tus productos a todo el país.</p>
+    </div>
+
+    <div class="beneficio">
+        <div class="beneficio-icono">🔒</div>
+        <h3>Compra segura</h3>
+        <p>Tu compra protegida.</p>
+    </div>
+
+    <div class="beneficio">
+        <div class="beneficio-icono">💳</div>
+        <h3>Medios de pago</h3>
+        <p>Diferentes opciones para pagar.</p>
+    </div>
+
+    <div class="beneficio">
+        <div class="beneficio-icono">💬</div>
+        <h3>Atención al cliente</h3>
+        <p>Estamos para ayudarte.</p>
+    </div>
+</section>
+
+    <section class="catalogo-cta">
+
+        <h2>Encontrá tu próximo electrodoméstico</h2>
+
+        <p>Explorá todos nuestros productos.</p>
+
+        <a href="pages/productos.html" class="btn-principal">
+            Ver catálogo
+        </a>
+
+    </section>
+
+</main>
+
+<!-- ==============================
+     SECCIÓN NOSOTRAS
+     ============================== -->
+
+<section class="nosotras">
+
+    <button id="btn-nosotras" class="btn-nosotras">
+        🌸 Nosotras
+    </button>
+
+    <div id="contenido-nosotras" class="contenido-nosotras">
+
+        <h2>🌸 Nosotras</h2>
+
+        <h3>¿Quiénes somos?</h3>
+
+        <p>
+            Somos un equipo de estudiantes que desarrolló Blossom,
+            un proyecto de e-commerce de electrodomésticos pensado
+            para ofrecer una experiencia de compra simple, visual
+            e intuitiva.
+        </p>
+
+        <h3>🏠 ¿De qué se trata Blossom?</h3>
+
+        <p>
+            Blossom es una tienda online de electrodomésticos donde
+            los usuarios pueden explorar diferentes categorías,
+            buscar productos, consultar sus detalles y realizar
+            una simulación de compra.
+        </p>
+
+        <h3>👩‍💻 Nuestro equipo</h3>
+
+        <div class="equipo">
+
+            <div class="integrante">
+                <strong>🩵​ Carla Acevedo Gadea</strong>
+                <span>Inicio, Catálogo, Categorías, Búsqueda y Productos más vendidos.</span>
+            </div>
+
+            <div class="integrante">
+                <strong>💜 Marianela Silvero</strong>
+                <span>Filtros, Detalle de producto y Carrito de compras.</span>
+            </div>
+
+            <div class="integrante">
+                <strong>🧡 Dariela López</strong>
+                <span>Checkout y Confirmación.</span>
+            </div>
+
+            <div class="integrante">
+                <strong>🩷​ Zully Ovelar</strong>
+                <span>Administración y Login.</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+            <img
+                src="img/logo/logo-blossom.png"
+                alt="Blossom Electrodomésticos"
+            >
+
+            <p>✅ Tu hogar, en un solo clic.</p>
+        </div>
+
+        <!-- ENLACES -->
+        <div class="footer-links">
+            <h3>Blossom</h3>
+
+            <a href="index.html">Inicio</a>
+            <a href="pages/productos.html">Catálogo</a>
+            <a href="index.html#categorias">Categorías</a>
+        </div>
+
+        <!-- CATEGORÍAS -->
+        <div class="footer-links">
+            <h3>Categorías</h3>
+
+            <a href="pages/productos.html?categoria=cocina">Cocina</a>
+            <a href="pages/productos.html?categoria=refrigeracion">Refrigeración</a>
+            <a href="pages/productos.html?categoria=lavado">Lavado</a>
+            <a href="pages/productos.html?categoria=limpieza">Limpieza</a>
+            <a href="pages/productos.html?categoria=climatizacion">Climatización</a>
+            <a href="pages/productos.html?categoria=pequenos-electrodomesticos">
+                Pequeños electrodomésticos
+            </a>
+        </div>
+
+        <!-- HORARIOS DE LA TIENDA FÍSICA -->
+        <div class="footer-info footer-horarios">
+            <h3>Horarios de atención</h3>
+
+            <p class="horario-dias">📅 Lunes a sábado</p>
+
+            <p>🌞 08:00 a 12:00</p>
+            <p>🌇 16:00 a 20:00</p>
+
+            <p class="horario-nota">Atención en tienda física</p>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-info">
+            <h3>Contacto</h3>
+
+            <p>📧 contacto@blossom.com</p>
+            <p>📱 Atención al cliente</p>
+            <p>🛒 Comprá fácil y seguro</p>
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        <p>© 2026 Blossom — E-commerce de electrodomésticos</p>
+    </div>
+
+</footer>
+
+
+<script src="js/productos.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>

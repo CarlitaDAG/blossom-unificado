@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compra confirmada | Blossom</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body class="pagina-confirmacion-body">
+
+    <header class="encabezado-carrito">
+        <nav class="navegacion-carrito">
+            <a href="../index.html" class="logo-carrito">
+                Blossom<span>.</span>
+            </a>
+
+            <div class="enlaces-carrito">
+                <a href="../index.html">Inicio</a>
+                <a href="productos.html">Catálogo</a>
+                <a href="carrito.html">Mi carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-confirmacion">
+
+        <!-- MENSAJE PRINCIPAL -->
+        <section class="tarjeta-confirmacion">
+
+            <div class="icono-confirmacion" aria-hidden="true">✓</div>
+
+            <span class="etiqueta-blossom">GRACIAS POR ELEGIRNOS</span>
+
+            <h1>¡Compra realizada con éxito!</h1>
+
+            <p class="mensaje-confirmacion">
+                Gracias por confiar en Blossom.
+                Esperamos que disfrutes tu compra.
+            </p>
+
+            <div class="numero-pedido">
+                <span>Estado de tu pedido</span>
+                <strong>Compra registrada</strong>
+            </div>
+
+            <p class="aviso-confirmacion">
+                Esta confirmación corresponde a la simulación de compra
+                de nuestro proyecto académico.
+            </p>
+
+        </section>
+
+        <!-- DATOS DEL CLIENTE -->
+        <section class="resumen-confirmacion">
+
+            <div class="encabezado-resumen-confirmacion">
+                <div>
+                    <span class="etiqueta-blossom">TUS DATOS</span>
+                    <h2>Información del cliente</h2>
+                </div>
+            </div>
+
+            <div class="datos-cliente-confirmacion">
+
+                <div class="fila-dato-confirmacion">
+                    <span>Nombre</span>
+                    <strong id="nombreCliente">No disponible</strong>
+                </div>
+
+                <div class="fila-dato-confirmacion">
+                    <span>Apellido</span>
+                    <strong id="apellidoCliente">No disponible</strong>
+                </div>
+
+                <div class="fila-dato-confirmacion">
+                    <span>Correo electrónico</span>
+                    <strong id="emailCliente">No disponible</strong>
+                </div>
+
+                <div class="fila-dato-confirmacion">
+                    <span>Teléfono</span>
+                    <strong id="telefonoCliente">No disponible</strong>
+                </div>
+
+                <div class="fila-dato-confirmacion">
+                    <span>Dirección</span>
+                    <strong id="direccionCliente">No disponible</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="acciones-confirmacion">
+            <a href="productos.html" class="boton-seguir-comprando">
+                Seguir comprando
+            </a>
+
+            <button
+                type="button"
+                class="boton-volver-inicio"
+                onclick="volverInicio()"
+            >
+                Volver al inicio
+            </button>
+        </section>
+
+    </main>
+
+    <footer class="pie-carrito">
+        <a href="../index.html" class="logo-carrito">
+            Blossom<span>.</span>
+        </a>
+        <p>Tu hogar, nuestro compromiso.</p>
+    </footer>
+
+    <script>
+        // Recuperar los datos guardados por checkout.js
+
+        const camposCliente = {
+            nombreCliente: "nombreCliente",
+            apellidoCliente: "apellidoCliente",
+            emailCliente: "emailCliente",
+            telefonoCliente: "telefonoCliente",
+            direccionCliente: "direccionCliente"
+        };
+
+        Object.entries(camposCliente).forEach(([id, clave]) => {
+            const elemento = document.getElementById(id);
+            const valor = localStorage.getItem(clave);
+
+            elemento.textContent = valor || "No disponible";
+        });
+
+        // Volver a la página principal
+
+        function volverInicio() {
+            window.location.href = "../index.html";
+        }
+    </script>
+
+</body>
+</html>

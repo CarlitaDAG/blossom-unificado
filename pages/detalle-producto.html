@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto | Blossom</title>
+
+    <!-- Estilos compartidos del equipo -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Estilos exclusivos de Mar -->
+    
+</head>
+
+<body>
+
+    <header class="encabezado-detalle">
+        <nav class="navegacion-detalle">
+            <a href="../index.html" class="logo-blossom">Blossom</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="carrito.html">Mi carrito</a>
+        </nav>
+    </header>
+
+    <main class="detalle-producto">
+
+        <a href="productos.html" class="volver-catalogo">
+            ← Volver al catálogo
+        </a>
+
+        <section class="detalle-contenido">
+
+            <div class="detalle-imagen">
+                <img
+                    id="imagen-producto"
+                    src=""
+                    alt="Imagen del producto"
+                >
+            </div>
+
+            <div class="detalle-informacion">
+
+                <span id="categoria-producto" class="etiqueta-categoria"></span>
+
+                <h1 id="nombre-producto">Cargando producto...</h1>
+
+                <p class="marca-producto">
+                    Marca: <span id="marca-producto"></span>
+                </p>
+
+                <p id="precio-producto" class="precio-producto"></p>
+
+                <p id="descripcion-producto" class="descripcion-producto"></p>
+
+                <div class="caracteristicas-producto">
+                    <h2>Características</h2>
+                    <p id="caracteristicas-producto"></p>
+                </div>
+
+                <p class="stock-producto">
+                    Disponibilidad:
+                    <span id="stock-producto"></span> unidades
+                </p>
+
+                <div class="selector-cantidad">
+                    <label for="cantidad">Cantidad:</label>
+                    <input
+                        type="number"
+                        id="cantidad"
+                        min="1"
+                        value="1"
+                    >
+                </div>
+
+                <button type="button" id="btn-agregar">
+                    Agregar al carrito
+                </button>
+
+                <p id="mensaje-producto" role="status"></p>
+
+                <a href="carrito.html" class="enlace-carrito">
+                    Ir al carrito →
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="pie-detalle">
+        <p>Blossom | Tu hogar, nuestro compromiso.</p>
+    </footer>
+
+    <!-- Mantener este orden -->
+    <script src="../js/productos.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/detalle-producto.js"></script>
+
+</body>
+</html>

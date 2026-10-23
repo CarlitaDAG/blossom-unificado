@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blossom | Catálogo</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+         ============================== -->
+
+    <header>
+
+        <div class="logo">
+    <a href="../index.html">
+        <img src="../img/logo/logo-blossom.png" alt="Blossom Electrodomésticos">
+    </a>
+</div>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="../index.html#categorias">Categorías</a>
+        </nav>
+
+        <div class="buscador">
+
+            <input
+                type="text"
+                id="buscador-productos"
+                placeholder="¿Qué estás buscando?"
+            >
+
+            <button id="btn-buscar">
+                Buscar
+            </button>
+
+        </div>
+
+        <a href="carrito.html" class="carrito">
+            🛒
+        </a>
+
+    </header>
+
+
+    <!-- ==============================
+         CONTENIDO DEL CATÁLOGO
+         ============================== -->
+
+    <main class="catalogo">
+
+        <section class="catalogo-encabezado">
+
+            <h2>Catálogo de productos</h2>
+
+            <p>
+                Encontrá el electrodoméstico que necesitás
+                para tu hogar.
+            </p>
+
+        </section>
+
+
+        <!-- Categoría seleccionada -->
+
+        <div class="categoria-seleccionada">
+
+            <p>
+                Mostrando todos los productos
+            </p>
+
+        </div>
+
+
+        <!-- ==============================
+             PRODUCTOS
+             ============================== -->
+
+        <section
+            id="lista-productos"
+            class="productos-grid"
+        >
+
+            <!--
+                Los productos serán cargados
+                mediante JavaScript.
+            -->
+
+        </section>
+
+
+        <!-- Mensaje cuando no haya resultados -->
+
+        <div
+            id="sin-resultados"
+            class="sin-resultados"
+        >
+
+            <h3>No encontramos productos</h3>
+
+            <p>
+                Probá con otro nombre o categoría.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Blossom — E-commerce de electrodomésticos
+        </p>
+
+    </footer>
+
+
+    <script src="../js/catalogo-mysql.js"></script>
+
+</body>
+
+</html>

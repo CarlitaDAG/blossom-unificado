@@ -1,0 +1,34 @@
+
+# Archivos de configuración privada
+.env
+.env.*
+!.env.example
+
+# Dependencias y archivos temporales
+vendor/
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Copias de seguridad y exportaciones de bases de datos
+*.sql
+*.sql.zip
+*.bak
+
+# Archivos temporales de editores
+.vscode/
+
+# Archivos de respaldo
+*respaldo*
+*backup*
+
+# Archivos de prueba de conexión
+/php/probar_conexion.php
+
+
+# Archivos administrativos sensibles
+/admin/crear_admin.php
+
+# Archivos administrativos sensibles
+/admin/crear_admin.php

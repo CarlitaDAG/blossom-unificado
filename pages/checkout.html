@@ -1,0 +1,324 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar compra | Blossom</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body class="pagina-checkout-body">
+
+    <header class="encabezado-carrito">
+        <nav class="navegacion-carrito">
+            <a href="../index.html" class="logo-carrito">
+                Blossom<span>.</span>
+            </a>
+
+            <div class="enlaces-carrito">
+                <a href="../index.html">Inicio</a>
+                <a href="productos.html">Catálogo</a>
+                <a href="carrito.html">Mi carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-checkout">
+
+        <section class="presentacion-checkout">
+            <div>
+                <span class="etiqueta-blossom">UN PASO MÁS CERCA DE TU HOGAR</span>
+                <h1>Finalizá tu <span>compra</span></h1>
+                <p>Completá tus datos y elegí cómo recibir tu pedido.</p>
+            </div>
+
+            <div class="icono-checkout" aria-hidden="true">♡</div>
+        </section>
+
+        <div class="progreso-compra">
+            <div class="paso-compra paso-completado">
+                <span>✓</span>
+                <p>Carrito</p>
+            </div>
+
+            <div class="linea-progreso linea-completada"></div>
+
+            <div class="paso-compra paso-activo">
+                <span>2</span>
+                <p>Datos de compra</p>
+            </div>
+
+            <div class="linea-progreso"></div>
+
+            <div class="paso-compra">
+                <span>3</span>
+                <p>Confirmación</p>
+            </div>
+        </div>
+
+        <form id="checkoutForm" class="formulario-checkout">
+
+            <div class="columnas-checkout">
+
+                <div class="secciones-checkout">
+
+                    <!-- DATOS DEL CLIENTE -->
+                    <section class="checkout-section checkout-datos">
+                        <div class="titulo-seccion-checkout">
+                            <span class="numero-seccion">01</span>
+                            <div>
+                                <h2>Datos del cliente</h2>
+                                <p>¿A nombre de quién preparamos tu pedido?</p>
+                            </div>
+                        </div>
+
+                        <div class="campos-checkout">
+
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Ingresá tu nombre"
+                                    autocomplete="given-name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="apellido">Apellido</label>
+                                <input
+                                    type="text"
+                                    id="apellido"
+                                    name="apellido"
+                                    placeholder="Ingresá tu apellido"
+                                    autocomplete="family-name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="ejemplo@email.com"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="Ingresá tu teléfono"
+                                    autocomplete="tel"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group campo-direccion">
+                                <label for="direccion">Dirección</label>
+                                <input
+                                    type="text"
+                                    id="direccion"
+                                    name="direccion"
+                                    placeholder="Calle, número y localidad"
+                                    autocomplete="street-address"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- MÉTODO DE ENVÍO -->
+                    <section class="checkout-section checkout-envio">
+                        <div class="titulo-seccion-checkout">
+                            <span class="numero-seccion">02</span>
+                            <div>
+                                <h2>¿Cómo querés recibirlo?</h2>
+                                <p>Elegí la opción que mejor te convenga.</p>
+                            </div>
+                        </div>
+
+                        <div class="shipping-options">
+
+                            <label class="shipping-option">
+                                <input
+                                    type="radio"
+                                    name="envio"
+                                    value="0"
+                                    required
+                                >
+                                <span class="icono-opcion">⌂</span>
+                                <span class="texto-opcion">
+                                    <strong>Retiro en tienda</strong>
+                                    <small>Retirá tu pedido personalmente</small>
+                                </span>
+                                <strong class="precio-opcion">Gratis</strong>
+                            </label>
+
+                            <label class="shipping-option">
+                                <input
+                                    type="radio"
+                                    name="envio"
+                                    value="5000"
+                                >
+                                <span class="icono-opcion">↗</span>
+                                <span class="texto-opcion">
+                                    <strong>Envío estándar</strong>
+                                    <small>Entrega a domicilio</small>
+                                </span>
+                                <strong class="precio-opcion">$5.000</strong>
+                            </label>
+
+                            <label class="shipping-option">
+                                <input
+                                    type="radio"
+                                    name="envio"
+                                    value="8000"
+                                >
+                                <span class="icono-opcion">⚡</span>
+                                <span class="texto-opcion">
+                                    <strong>Envío express</strong>
+                                    <small>Entrega prioritaria</small>
+                                </span>
+                                <strong class="precio-opcion">$8.000</strong>
+                            </label>
+
+                        </div>
+                    </section>
+
+                    <!-- MÉTODO DE PAGO -->
+                    <section class="checkout-section checkout-pago">
+                        <div class="titulo-seccion-checkout">
+                            <span class="numero-seccion">03</span>
+                            <div>
+                                <h2>Elegí tu forma de pago</h2>
+                                <p>Seleccioná cómo preferís pagar.</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-options">
+
+                            <label class="payment-option">
+                                <input
+                                    type="radio"
+                                    name="pago"
+                                    value="tarjeta"
+                                    required
+                                >
+                                <span class="icono-pago">▣</span>
+                                <span>
+                                    <strong>Tarjeta de crédito/débito</strong>
+                                    <small>Pago con tarjeta</small>
+                                </span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input
+                                    type="radio"
+                                    name="pago"
+                                    value="transferencia"
+                                >
+                                <span class="icono-pago">⇄</span>
+                                <span>
+                                    <strong>Transferencia bancaria</strong>
+                                    <small>Transferencia desde tu banco</small>
+                                </span>
+                            </label>
+
+                            <label class="payment-option">
+                                <input
+                                    type="radio"
+                                    name="pago"
+                                    value="efectivo"
+                                >
+                                <span class="icono-pago">$</span>
+                                <span>
+                                    <strong>Efectivo</strong>
+                                    <small>Pago en efectivo</small>
+                                </span>
+                            </label>
+
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- RESUMEN DE COMPRA -->
+                <aside class="checkout-resumen">
+                    <span class="etiqueta-blossom">TU PEDIDO</span>
+                    <h2>Resumen de compra</h2>
+                    <p class="texto-resumen-checkout">
+                        Revisá los importes antes de confirmar.
+                    </p>
+
+                    <div id="checkout-productos" class="checkout-productos">
+                        <!-- Se puede completar desde checkout.js -->
+                    </div>
+
+                    <div class="resumen-linea">
+                        <span>Subtotal</span>
+                        <strong id="subtotal">$0</strong>
+                    </div>
+
+                    <div class="resumen-linea">
+                        <span>Envío</span>
+                        <strong id="costoEnvio">$0</strong>
+                    </div>
+
+                    <div class="separador-resumen"></div>
+
+                    <div class="resumen-total">
+                        <span>Total</span>
+                        <strong id="total">$0</strong>
+                    </div>
+
+                    <p class="aviso-checkout">
+                        El importe del envío se actualizará según la opción elegida.
+                    </p>
+
+                    <button
+                        type="submit"
+                        id="btnConfirmarCompra"
+                        class="btn-confirmar"
+                    >
+                        Confirmar compra <span>→</span>
+                    </button>
+
+                    <a href="carrito.html" class="volver-carrito-checkout">
+                        ← Volver al carrito
+                    </a>
+
+                    <div class="mensaje-seguridad-checkout">
+                        <span>♡</span>
+                        <p>Revisá tus datos antes de confirmar el pedido.</p>
+                    </div>
+                </aside>
+
+            </div>
+        </form>
+    </main>
+
+    <footer class="pie-carrito">
+        <a href="../index.html" class="logo-carrito">
+            Blossom<span>.</span>
+        </a>
+        <p>Tu hogar, nuestro compromiso.</p>
+    </footer>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/checkout.js"></script>
+
+</body>
+</html>
